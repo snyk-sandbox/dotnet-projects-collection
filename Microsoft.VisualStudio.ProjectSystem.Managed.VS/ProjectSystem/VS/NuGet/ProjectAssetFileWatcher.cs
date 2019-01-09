@@ -164,7 +164,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.NuGet
 
         private static string GetProjectAssetsFilePath(IProjectTree newTree, IProjectSubscriptionUpdate projectUpdate)
         {
-            string projectFilePath = projectUpdate.CurrentState.GetPropertyOrDefault(ConfigurationGeneral.SchemaName, ConfigurationGeneral.MSBuildProjectFullPathProperty, null);
+            string projectFilePath = projectUpdate.CurrentState.GetPropertyOrDefault(ConfigurationGeneral.SchemaName, ConfigurationGeneralProjectFullPathProperty, null);
 
             // First check to see if the project has a project.json.
             IProjectTree projectJsonNode = FindProjectJsonNode(newTree, projectFilePath);

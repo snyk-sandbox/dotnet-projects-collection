@@ -121,15 +121,15 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Nancy.Owin.MSBuild\Nancy.Owin.csproj">
+    <ProjectReference Include="..\Nancy.Owin\Nancy.Owin.csproj">
       <Project>{d6b2480c-2a52-4d02-9477-d387d7a486e5}</Project>
       <Name>Nancy.Owin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Nancy.ViewEngines.Spark.MSBuild\Nancy.ViewEngines.Spark.csproj">
+    <ProjectReference Include="..\Nancy.ViewEngines.Spark\Nancy.ViewEngines.Spark.csproj">
       <Project>{4B7E35DF-1569-4346-B180-A09615723095}</Project>
       <Name>Nancy.ViewEngines.Spark</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Nancy.MSBuild\Nancy.csproj">
+    <ProjectReference Include="..\Nancy\Nancy.csproj">
       <Project>{34576216-0DCA-4B0F-A0DC-9075E75A676F}</Project>
       <Name>Nancy</Name>
     </ProjectReference>
@@ -158,7 +158,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

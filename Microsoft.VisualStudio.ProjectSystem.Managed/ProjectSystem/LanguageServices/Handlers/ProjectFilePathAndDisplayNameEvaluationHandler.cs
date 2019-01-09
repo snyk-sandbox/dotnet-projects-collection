@@ -13,7 +13,7 @@ using Microsoft.VisualStudio.ProjectSystem.Logging;
 namespace Microsoft.VisualStudio.ProjectSystem.LanguageServices.Handlers
 {
     /// <summary>
-    ///     Handles changes to the project file, and updates <see cref="IWorkspaceProjectContext.ProjectFilePath"/> 
+    ///     Handles changes to the project file, and updates <see cref="IWorkspaceProjectContext.ProjectFilePath"/>
     ///     and <see cref="IWorkspaceProjectContext.DisplayName"/>.
     /// </summary>
     [Export(typeof(IWorkspaceContextHandler))]
@@ -42,14 +42,14 @@ namespace Microsoft.VisualStudio.ProjectSystem.LanguageServices.Handlers
 
             VerifyInitialized();
 
-            if (projectChange.Difference.ChangedProperties.Contains(ConfigurationGeneral.MSBuildProjectFullPathProperty))
+            if (projectChange.Difference.ChangedProperties.Contains(ConfigurationGeneralProjectFullPathProperty))
             {
-                string projectFilePath = projectChange.After.Properties[ConfigurationGeneral.MSBuildProjectFullPathProperty];
+                string projectFilePath = projectChange.After.Properties[ConfigurationGeneralProjectFullPathProperty];
                 string displayName = GetDisplayName(projectFilePath);
 
                 logger.WriteLine("DisplayName: {0}", displayName);
                 logger.WriteLine("ProjectFilePath: {0}", projectFilePath);
-                
+
                 Context.ProjectFilePath = projectFilePath;
                 Context.DisplayName = displayName;
             }
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.LanguageServices.Handlers
             // Calculate the display name to use for the editor context switch and project column
             // in the Error List.
             //
-            // When multi-targeting, we want to include the implicit dimension values in 
+            // When multi-targeting, we want to include the implicit dimension values in
             // the name to disambiguate it from other contexts in the same project. For example:
             //
             // ClassLibrary (net45)

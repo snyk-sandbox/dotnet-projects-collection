@@ -15,7 +15,7 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Telegram.Bot\Telegram.Bot.csproj" />
+    <ProjectReference Include="..\Telegram.Bot\Telegram.Bot.csproj" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />

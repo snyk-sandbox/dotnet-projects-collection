@@ -108,15 +108,15 @@
     <Compile Include="SecureModule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Nancy.Hosting.Aspnet.MSBuild\Nancy.Hosting.Aspnet.csproj">
+    <ProjectReference Include="..\Nancy.Hosting.Aspnet\Nancy.Hosting.Aspnet.csproj">
       <Project>{15B7F794-0BB2-4B66-AD78-4A951F1209B2}</Project>
       <Name>Nancy.Hosting.Aspnet</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Nancy.ViewEngines.Razor.MSBuild\Nancy.ViewEngines.Razor.csproj">
+    <ProjectReference Include="..\Nancy.ViewEngines.Razor\Nancy.ViewEngines.Razor.csproj">
       <Project>{2C6F51DF-015C-4DB6-B44C-0E5E4F25E2A9}</Project>
       <Name>Nancy.ViewEngines.Razor</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Nancy.MSBuild\Nancy.csproj">
+    <ProjectReference Include="..\Nancy\Nancy.csproj">
       <Project>{34576216-0DCA-4B0F-A0DC-9075E75A676F}</Project>
       <Name>Nancy</Name>
     </ProjectReference>
@@ -164,7 +164,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

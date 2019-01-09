@@ -33,7 +33,7 @@
   </Target>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\core\Engine\Tweek.Engine.Drivers\Tweek.Engine.Drivers.csproj" />
+    <ProjectReference Include="..\Tweek.Engine.Drivers\Tweek.Engine.Drivers.csproj" />
   </ItemGroup>
 
   <ItemGroup>

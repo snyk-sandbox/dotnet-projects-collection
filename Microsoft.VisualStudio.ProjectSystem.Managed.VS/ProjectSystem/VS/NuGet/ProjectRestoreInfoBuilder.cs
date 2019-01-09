@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.NuGet
             {
                 IProjectChangeDescription nugetRestoreChanges = update.Value.ProjectChanges[NuGetRestore.SchemaName];
                 msbuildProjectExtensionsPath = msbuildProjectExtensionsPath ??
-                    nugetRestoreChanges.After.Properties[NuGetRestore.MSBuildProjectExtensionsPathProperty];
+                    nugetRestoreChanges.After.Properties[NuGetRestoreProjectExtensionsPathProperty];
                 originalTargetFrameworks = originalTargetFrameworks ??
                     nugetRestoreChanges.After.Properties[NuGetRestore.TargetFrameworksProperty];
                 bool noTargetFramework =

@@ -18,19 +18,19 @@ namespace Microsoft.VisualStudio.Build
     internal static class BuildUtilities
     {
         /// <summary>
-        ///     Returns a value indicating whether the specified property has a condition that 
+        ///     Returns a value indicating whether the specified property has a condition that
         ///     always evaluates to <see langword="true"/>.
         /// </summary>
         public static bool HasWellKnownConditionsThatAlwaysEvaluateToTrue(ProjectPropertyElement element)
         {
             Requires.NotNull(element, nameof(element));
 
-            // We look for known conditions that evaluate to true so that 
-            // projects can have patterns where they opt in/out of target 
+            // We look for known conditions that evaluate to true so that
+            // projects can have patterns where they opt in/out of target
             // frameworks based on whether they are inside Visual Studio or not.
 
             // For example:
-            // 
+            //
             // <TargetFrameworks>net461;net452</TargetFrameworks>
             // <TargetFrameworks Condition = "'$(BuildingInsideVisualStudio)' == 'true'">net461</TargetFrameworks>
 
@@ -161,7 +161,7 @@ namespace Microsoft.VisualStudio.Build
 
             if (!valueFound)
             {
-                throw new ArgumentException(string.Format(Resources.MsBuildMissingValueToRemove, valueToRemove, propertyName), nameof(valueToRemove));
+                throw new ArgumentException(string.Format(ResourcesMissingValueToRemove, valueToRemove, propertyName), nameof(valueToRemove));
             }
         }
 
@@ -209,7 +209,7 @@ namespace Microsoft.VisualStudio.Build
 
             if (!valueFound)
             {
-                throw new ArgumentException(string.Format(Resources.MsBuildMissingValueToRename, oldValue, propertyName), nameof(oldValue));
+                throw new ArgumentException(string.Format(ResourcesMissingValueToRename, oldValue, propertyName), nameof(oldValue));
             }
         }
 

@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/Nancy/Nancy.csproj" />
-    <ProjectReference Include="../../src/Nancy.Validation.FluentValidation/Nancy.Validation.FluentValidation.csproj" />
+    <ProjectReference Include="../Nancy/Nancy.csproj" />
+    <ProjectReference Include="../Nancy.Validation.FluentValidation/Nancy.Validation.FluentValidation.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">

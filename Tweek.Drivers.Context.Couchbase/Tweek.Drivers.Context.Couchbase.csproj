@@ -18,7 +18,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\core\Tweek.ApiService.Addons\Tweek.ApiService.Addons.csproj" />
+    <ProjectReference Include="..\Tweek.ApiService.Addons\Tweek.ApiService.Addons.csproj" />
   </ItemGroup>
   <Target Name="SetNuspecProperties" BeforeTargets="GenerateNuspec">
     <PropertyGroup>

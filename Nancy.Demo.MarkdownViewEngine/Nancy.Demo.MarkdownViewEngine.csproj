@@ -131,15 +131,15 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Nancy.Hosting.Aspnet.MSBuild\Nancy.Hosting.Aspnet.csproj">
+    <ProjectReference Include="..\Nancy.Hosting.Aspnet\Nancy.Hosting.Aspnet.csproj">
       <Project>{15b7f794-0bb2-4b66-ad78-4a951f1209b2}</Project>
       <Name>Nancy.Hosting.Aspnet</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Nancy.ViewEngines.Markdown.MSBuild\Nancy.ViewEngines.Markdown.csproj">
+    <ProjectReference Include="..\Nancy.ViewEngines.Markdown\Nancy.ViewEngines.Markdown.csproj">
       <Project>{864af449-0902-44fc-beee-06ba9a6f4a8f}</Project>
       <Name>Nancy.ViewEngines.Markdown</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Nancy.MSBuild\Nancy.csproj">
+    <ProjectReference Include="..\Nancy\Nancy.csproj">
       <Project>{34576216-0dca-4b0f-a0dc-9075e75a676f}</Project>
       <Name>Nancy</Name>
     </ProjectReference>

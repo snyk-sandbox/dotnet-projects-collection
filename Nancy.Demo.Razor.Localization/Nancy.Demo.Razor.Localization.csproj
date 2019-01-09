@@ -104,15 +104,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Nancy.Hosting.Aspnet.MSBuild\Nancy.Hosting.Aspnet.csproj">
+    <ProjectReference Include="..\Nancy.Hosting.Aspnet\Nancy.Hosting.Aspnet.csproj">
       <Project>{15b7f794-0bb2-4b66-ad78-4a951f1209b2}</Project>
       <Name>Nancy.Hosting.Aspnet</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Nancy.ViewEngines.Razor.MSBuild\Nancy.ViewEngines.Razor.csproj">
+    <ProjectReference Include="..\Nancy.ViewEngines.Razor\Nancy.ViewEngines.Razor.csproj">
       <Project>{2c6f51df-015c-4db6-b44c-0e5e4f25e2a9}</Project>
       <Name>Nancy.ViewEngines.Razor</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Nancy.MSBuild\Nancy.csproj">
+    <ProjectReference Include="..\Nancy\Nancy.csproj">
       <Project>{34576216-0dca-4b0f-a0dc-9075e75a676f}</Project>
       <Name>Nancy</Name>
     </ProjectReference>
@@ -145,7 +145,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

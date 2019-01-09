@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.LanguageServices
 
                 snapshot.Properties.TryGetValue(ConfigurationGeneral.LanguageServiceNameProperty, out data.LanguageName);
                 snapshot.Properties.TryGetValue(ConfigurationGeneral.TargetPathProperty, out data.BinOutputPath);
-                snapshot.Properties.TryGetValue(ConfigurationGeneral.MSBuildProjectFullPathProperty, out data.ProjectFilePath);
+                snapshot.Properties.TryGetValue(ConfigurationGeneralProjectFullPathProperty, out data.ProjectFilePath);
 
                 data.ProjectGuid = projectGuid;
                 data.WorkspaceProjectContextId = GetWorkspaceProjectContextId(data.ProjectFilePath, projectGuid, configuration);
@@ -48,12 +48,12 @@ namespace Microsoft.VisualStudio.ProjectSystem.LanguageServices
 
             private static string GetWorkspaceProjectContextId(string projectFilePath, Guid projectGuid, ProjectConfiguration configuration)
             {
-                // WorkspaceContextId must be unique across the entire solution for the life of the solution, therefore as we fire 
-                // up a workspace context per implicitly active config, we factor in both the full path of the project, the GUID of 
-                // project and the name of the config. This will be unique across regardless of whether projects are added or renamed 
+                // WorkspaceContextId must be unique across the entire solution for the life of the solution, therefore as we fire
+                // up a workspace context per implicitly active config, we factor in both the full path of the project, the GUID of
+                // project and the name of the config. This will be unique across regardless of whether projects are added or renamed
                 // to match this project's original name. We include file path to make debugging easier on the Roslyn side.
                 //
-                // NOTE: Roslyn also uses this name as the default "AssemblyName" until we explicitly set it, so we need to make 
+                // NOTE: Roslyn also uses this name as the default "AssemblyName" until we explicitly set it, so we need to make
                 // sure it doesn't contain any invalid path characters.
                 //
                 // For example:
