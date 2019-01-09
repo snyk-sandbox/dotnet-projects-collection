@@ -14,10 +14,10 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tweek.Engine.Core\Tweek.Engine.Core.csproj" />
-    <ProjectReference Include="..\Tweek.Engine.DataTypes\Tweek.Engine.DataTypes.csproj" />
-    <ProjectReference Include="..\Tweek.Engine.Drivers\Tweek.Engine.Drivers.csproj" />
-    <ProjectReference Include="..\Tweek.Engine\Tweek.Engine.csproj" />
+    <ProjectReference Include="../Tweek.Engine.Core/Tweek.Engine.Core.csproj" />
+    <ProjectReference Include="../Tweek.Engine.DataTypes/Tweek.Engine.DataTypes.csproj" />
+    <ProjectReference Include="../Tweek.Engine.Drivers/Tweek.Engine.Drivers.csproj" />
+    <ProjectReference Include="../Tweek.Engine/Tweek.Engine.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Context/schema.json" CopyToOutputDirectory="Always" />

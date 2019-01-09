@@ -7,7 +7,7 @@
     <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\key-managment\key-managment.csproj" />
+    <ProjectReference Include="../key-managment/key-managment.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Net.Security" Version="4.3.2" />

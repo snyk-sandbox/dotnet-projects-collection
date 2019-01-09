@@ -16,7 +16,7 @@
     <PackageReference Include="System.Collections.Immutable" version="1.4.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tweek.ApiService.Addons\Tweek.ApiService.Addons.csproj" />
+    <ProjectReference Include="../Tweek.ApiService.Addons/Tweek.ApiService.Addons.csproj" />
   </ItemGroup>
   <Target Name="SetNuspecProperties" BeforeTargets="GenerateNuspec">
     <PropertyGroup>
