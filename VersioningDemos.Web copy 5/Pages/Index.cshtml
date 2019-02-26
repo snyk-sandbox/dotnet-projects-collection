@@ -1,0 +1,82 @@
+﻿@page
+@model VersioningDemos.Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "Versions";
+}
+
+<h2>My Assemblies</h2>
+
+<table class="table table-bordered table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Assembly version</th>
+            <th>File version</th>
+            <th>Product version</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ai in Model.Assemblies.OrderBy(a => a.Name))
+        {
+            <tr>
+                <td>@ai.Name</td>
+                <td>@ai.AssemblyVersion</td>
+                <td>@ai.FileVersion</td>
+                <td>@ai.ProductVersion</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Unexpected Assemblies</h2>
+<p>
+    These are the assemblies that cause unexpected side effects when checking current version.
+    When compiled in debug mode pages are compiled into individual assemblies.
+    When compiled for release a <code>PrecompiledViews</code> assembly is created.
+</p>
+
+<table class="table table-bordered table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Assembly version</th>
+            <th>File version</th>
+            <th>Product version</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ai in Model.UnexpectedAssemblies.OrderBy(a => a.Name))
+        {
+            <tr>
+                <td>@ai.Name</td>
+                <td>@ai.AssemblyVersion</td>
+                <td>@ai.FileVersion</td>
+                <td>@ai.ProductVersion</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Microsoft Assemblies</h2>
+
+<table class="table table-bordered table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Assembly version</th>
+            <th>File version</th>
+            <th>Product version</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ai in Model.MicrosoftAssemblies.OrderBy(a => a.Name))
+        {
+            <tr>
+                <td>@ai.Name</td>
+                <td>@ai.AssemblyVersion</td>
+                <td>@ai.FileVersion</td>
+                <td>@ai.ProductVersion</td>
+            </tr>
+        }
+    </tbody>
+</table>
